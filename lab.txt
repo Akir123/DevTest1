@@ -3,5 +3,7 @@ bye
 yes
 no
 what yoya
+go
+goa
 
 
