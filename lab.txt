@@ -6,6 +6,8 @@ bat
 sup
 go
 goa
+tiger
+ele
 
 
 
