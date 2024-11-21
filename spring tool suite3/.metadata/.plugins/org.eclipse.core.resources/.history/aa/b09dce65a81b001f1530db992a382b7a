@@ -1,0 +1,8 @@
+package in.ashokit.service;
+
+import in.ashokit.binding.DashboardResponse;
+
+
+public class EnquiryService {
+public DashboardResponse getDashboardData(Integer userId);
+}

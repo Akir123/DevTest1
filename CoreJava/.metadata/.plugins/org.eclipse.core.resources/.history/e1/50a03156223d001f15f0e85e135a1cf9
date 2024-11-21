@@ -1,0 +1,12 @@
+package com.java;
+
+import java.util.Arrays;
+
+public class Map {
+
+	public static void main(String[] args) {
+	List<String> a = Arrays.asList("hello","world");
+
+	}
+
+}

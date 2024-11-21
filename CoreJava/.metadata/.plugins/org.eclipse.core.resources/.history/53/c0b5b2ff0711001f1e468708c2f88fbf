@@ -1,0 +1,21 @@
+package com.java;
+
+public class G {
+
+	public static void main(String[] args) {
+		G1 m = new G1();
+		
+
+	}
+
+}
+interface G1 {
+	class MyThread implements Runnable {
+		public void run() {
+			System.out.println("hiii");
+		}
+		MyThread mt = new MyThread();
+		Thread t = new Thread(mt);
+		t.start();
+	}
+}

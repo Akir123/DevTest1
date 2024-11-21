@@ -1,0 +1,13 @@
+package com.java;
+
+public class Power {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int B = 2;
+		int P = 3;
+		int power = power(B,P);
+		System.out.println(power);
+	}
+
+}

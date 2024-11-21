@@ -1,0 +1,19 @@
+package com.java;
+
+public class AnyMatch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+class People {
+	String name;
+	String country;
+	
+	public People(String name, String country) {
+		this.name = name;
+		this.country = country;
+	}
+}

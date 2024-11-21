@@ -1,0 +1,14 @@
+package Core;
+
+public class Y {
+
+	public static void main(String[] args) {
+		int a = 20;
+		Integer p = new Integer(a);
+System.out.println(p);
+
+String s = "aman";
+String q = new String(s);
+System.out.println(q);
+	}
+}

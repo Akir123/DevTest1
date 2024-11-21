@@ -1,0 +1,11 @@
+package Core;
+
+public class K {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+StringBuffer sb = new StringBuffer("ashu");
+System.out.println(sb);
+	}
+
+}

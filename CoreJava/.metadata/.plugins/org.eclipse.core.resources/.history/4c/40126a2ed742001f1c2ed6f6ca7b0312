@@ -1,0 +1,17 @@
+package com.java;
+
+public class Amy {
+
+	public static void main(String[] args) {
+		Bi b = new Bi();
+	}
+
+}
+class Ai {
+	public Ai() {
+		System.out.println("hi");
+	}
+}
+class Bi extends Ai {
+	
+}

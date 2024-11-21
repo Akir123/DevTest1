@@ -1,0 +1,110 @@
+
+=======================================================================
+
+Q-1) What are the challenges you have faced in your project ?
+
+Q-2) Where you have used Multi Threading in your project ?
+
+Q-3) What is the complex task you have implemented in your project ?
+
+========================================================================
+
+-> We have implemented CO module to send notices to citizens
+
+-> CO module sending notices to citizen one by one 
+
+1 notice is taking 1 sec time to process
+
+1 min : 60 notices
+
+1 hour : 60 * 60 : 3600 notices
+
+Day-1 : 2000 applications : 2000 notices sent
+
+Day-2 : 5000 applications : 3600 notices sent => 1400 notices pending
+
+Day-3 : 10000 applications : 3600 notices sent => 6400 + 1400 notices are pending
+
+Day-4 : 20k applications: 3600 notices sent => so many notices are pendig...
+
+
+=> To improve performance of Notice Generation we have used Multi Threading in our project.
+
+=> Insteading of running our program with single thread we have created 10 threads to execute notice processing.
+
+1 sec : 10 threads : 10 notices
+
+1 min: 60 * 10 : 600 notices
+
+1 hour : 600 * 60 = 36000 notices
+
+
+===================================================================
+Q-4) What are the design patterns you have used in your project ?
+===================================================================
+
+1) Singleton Design Pattern
+
+2) Factory Design Pattern
+
+3) Builder Design Pattern
+
+4) Microservices Design Pattern
+
+5) Circuit Breaker Design Pattern
+
+6) Api Gateway Design Pattern
+
+7) MVC Design Pattern
+
+8) Cache Design Pattern
+
+9) Strategy Design Pattern
+
+
+===============================================================
+Q-5) How you implemented Exception Handling in your project ?
+===============================================================
+
+We have implemented Global Exception Handling concept using @ControllerAdvice and @ExceptionHandler annotations.
+
+
+=======================================================
+Q-6) How you implemented Security in your project ?
+=======================================================
+
+We have used Spring security concept in our project using JdbcAuthentication with the help of UserDetailsService.
+
+			public User loadUserByUsername(String username){
+				// logic
+			}
+
+We are accesing few third party apis in our project and those are secued by using JWT tokens. We will make a request for token with authentication credentials then we will make actual request with JWT to get the response.
+
+
+========================================================
+Q-7) Where do you store your application properties ?
+========================================================
+
+We are using Config Server to externalize application properties from source code
+
+
+=================================
+Q-8) How to deploy application ?
+=================================
+
+=> We are using Jenkins CI CD pipeline to deploy docker image into AWS EKS cluster.
+
+
+=======================================================================
+Q-9) How one microservice will communicate with another microservice ?
+=======================================================================
+
+For Interservice communication thru service registry : FeignClient
+
+For third party apis : RestTemplate / WebClient
+
+
+
+
+

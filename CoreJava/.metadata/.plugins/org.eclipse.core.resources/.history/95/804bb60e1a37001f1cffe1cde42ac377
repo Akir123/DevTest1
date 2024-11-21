@@ -1,0 +1,11 @@
+package com.java;
+public class eU {
+	public static void main(String [] args) {
+		FunctionalIntern1 f = (a,b) -> return a * b;
+	}
+}
+interface FunctionalIntern1 {
+public int a = 20;
+public int b = 30;
+public int add(int a, int b);
+}

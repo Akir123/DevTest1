@@ -1,0 +1,23 @@
+package com.java;
+
+public class Users {
+
+	public static void main(String[] args) {
+		Users1 u = new Users1();
+
+	}
+
+}
+class Users1 {
+	int emp_age;
+	String emp_name;
+	public Users1(int emp_age, String emp_name) {
+		this.emp_name = emp_name;
+		this.emp_age = emp_age;
+	}
+	@Override
+	public String toString() {
+		return "Users [emp_age=" + emp_age + ", emp_name=" + emp_name + "]";
+	}
+	
+}

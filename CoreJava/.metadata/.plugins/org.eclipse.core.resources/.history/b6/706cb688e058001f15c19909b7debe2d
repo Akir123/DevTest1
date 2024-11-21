@@ -1,0 +1,18 @@
+package com.java;
+
+public class Emp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+class Employee3 {
+	String name;
+	int salary;
+	public Employee3(String name, int salary) {
+		this.name = name;
+		this.Salary = salary;
+	}
+}

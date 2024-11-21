@@ -1,0 +1,13 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: greet
+    
+  config:
+    import:
+    - optional:configserver:http://localhost:8080
+
+msg: Hello, from application.yml!
+

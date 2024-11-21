@@ -1,0 +1,22 @@
+package Core;
+
+public class R {
+
+	public static void main(String[] args) {
+		String s1 = "aman";
+		String s2 = "aditya";
+		for(int i = 0; i <= s1.length()-1; i++) {
+			char ch = s1.charAt(i);
+		if(s1.equals(s2)) {
+			System.out.println(s1+ ": equals to s2");
+			break;
+		}
+		else {
+			System.out.println(s1+ ": not equals s2");
+			break;
+		}
+		}
+
+	}
+
+}

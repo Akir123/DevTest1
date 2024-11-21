@@ -1,0 +1,19 @@
+package com.java;
+
+public class StreamAPI3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+class User {
+	int age;
+	String name;
+	
+	public User(int age, String name) {
+		this.age = age;
+		this.name = name;
+	}
+}

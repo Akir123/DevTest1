@@ -1,0 +1,17 @@
+package com.user.rest;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class WelcomeRestController {
+
+	   @Value("${my.property}")
+	    private String myProperty;
+
+	    @GetMapping("/welcome")
+	    public String welcome() {
+	        return "Property Value: " + myProperty;
+	    }
+}

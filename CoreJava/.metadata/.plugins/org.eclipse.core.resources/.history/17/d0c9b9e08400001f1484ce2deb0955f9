@@ -1,0 +1,15 @@
+package Core;
+
+public class Aman {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+@FunctionalInterface
+interface Aman {
+m1();
+m2();
+}

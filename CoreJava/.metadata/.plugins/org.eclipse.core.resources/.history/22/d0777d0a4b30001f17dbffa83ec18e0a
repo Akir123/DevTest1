@@ -1,0 +1,19 @@
+package com.java;
+
+import java.util.Scanner;
+
+public class CheckAlphabet {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc = new Scanner(System.in);
+System.out.println("enter String :");
+String x = "aditya";
+String y = sc.next();
+if(y.equals(x)) {
+	
+}
+
+	}
+
+}

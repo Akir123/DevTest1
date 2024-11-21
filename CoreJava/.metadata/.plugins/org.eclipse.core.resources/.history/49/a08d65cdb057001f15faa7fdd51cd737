@@ -1,0 +1,24 @@
+package com.java;
+
+import java.util.Optional;
+
+public class OptionalClass1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+class Optio {
+	public String<String> getUsername(String sex) {
+		String name = null;
+		if(sex.equals("male")) {
+			return "marriage happens";
+		}
+		else {
+			return "marriage didnt happens";
+		}
+		return Optional.ofNullable(name);
+	}
+}

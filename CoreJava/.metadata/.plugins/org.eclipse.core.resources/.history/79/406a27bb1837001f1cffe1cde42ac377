@@ -1,0 +1,14 @@
+package com.java;
+
+public class FunctionalInt {
+
+	public static void main(String[] args) {
+		Adi a = n -> System.out.println("hello");
+
+	}
+
+}
+@FunctionalInterface
+interface Adi {
+	public void m1(int n);
+}

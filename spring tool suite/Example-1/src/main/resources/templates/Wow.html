@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Info Page</title>
+</head>
+<body>
+    <h1>User Information</h1>
+    <ul>
+        <li th:each="adi : ${adis}" th:text="${adi.name}"></li>
+    </ul>
+
+    <h1>Product Information</h1>
+    <ul>
+        <li th:each="mayur : ${mayuras}" th:text="${mayur.name}"></li>
+    </ul>
+
+    <h1>Order Information</h1>
+    <ul>
+        <li th:each="susanta : ${susantas}" th:text="${susanta.name}"></li>
+    </ul>
+</body>
+</html>

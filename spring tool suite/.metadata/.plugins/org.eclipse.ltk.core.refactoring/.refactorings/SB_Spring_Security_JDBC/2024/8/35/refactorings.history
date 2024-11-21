@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.user.config.SecurityConfigurer.java&apos; to &apos;SecurityConfiguration.java&apos;&#x0D;&#x0A;- Original project: &apos;SB_Spring_Security_JDBC&apos;&#x0D;&#x0A;- Original element: &apos;com.user.config.SecurityConfigurer.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.user.config.SecurityConfiguration.java&apos;" description="Rename compilation unit &apos;SecurityConfigurer.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.user.config{SecurityConfigurer.java" name="SecurityConfiguration.java" references="false" stamp="1724875186462" version="1.0"/>
+</session>

@@ -1,0 +1,26 @@
+package Core;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class A {
+
+	public static void main(String[] args) {
+		String str1 = "aditya";
+
+		char[] chars = str1.toCharArray();
+
+		HashMap<Character, Integer> charsCount = new HashMap<Character, Integer>();
+
+		for (char c : chars) {
+			if (charsCount.containsKey(c)) {
+				charsCount.put(c, charsCount.get(c) + 1);
+			} else
+				charsCount.put(c, 1);
+		}
+
+		System.out.println(charsCount); // {a=2, A=1, b=2, B=1, c=2, C=1, d=2, D=1}
+
+	}
+
+}

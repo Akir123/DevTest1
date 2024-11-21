@@ -1,0 +1,17 @@
+package Core;
+
+public class K {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+StringBuffer sb = new StringBuffer("hello world");
+System.out.println(sb);
+sb.append("it");
+System.out.println(sb);
+sb.reverse();
+System.out.println(sb);
+sb.replace(6,11,"java");
+System.out.println(sb);
+	}
+
+}

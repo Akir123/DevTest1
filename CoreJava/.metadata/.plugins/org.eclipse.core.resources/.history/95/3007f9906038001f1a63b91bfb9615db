@@ -1,0 +1,28 @@
+package com.java;
+
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Optional;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		String s = "MayUr@23DhoPte";
+		char[] c = s.toCharArray();
+		for(int i = 0; i <= s.length()-1; i++) {
+			char ch = c[i];
+			if(ch >= 'A' && ch <= 'Z') {
+				c[i] = (char)(ch+32);
+			}
+			else if(ch >= 'a' && ch <= 'z') {
+				c[i] = (char)(ch-32);
+			}
+
+		System.out.print(c[i]+"  ");
+			
+		}
+
+	}
+}

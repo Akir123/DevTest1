@@ -1,0 +1,11 @@
+package in.ashokit.feign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@FeignClient(name = "welcome-service")
+public interface GreetFeignClient {
+    @GetMapping("/welcome")
+    String greet();
+}
+

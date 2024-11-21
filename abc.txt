@@ -1,0 +1,70 @@
+resume headline: Immediate Joiner Java Developer with proficient in Java, Spring Boot, Microservices, RESTful WebServices, Hibernate, MySQL Databases, SDLC, Docker, AWS and Git
+
+job profile: 
+Developing web applications using Spring Boot Framework
+- Implementing REST Web Services and Microservices
+- Knowledge of JWT, Open API, Apache Kafka, Oauth2.0
+- Working in Agile methodology
+- Integrating project required API's in the application like I-text pdf generator, Email Sending Services etc.
+
+project detail:
+Project TravelLinx 3.0 is a software application that allows to search and book buses, manage their reservation and check-in for their buses. The system typically includes a database of bus schedules, fare and availability, as well as user interface for searching and booking buses.
+
+profile summary:
+With over 3+ years of experience in the IT industry, I have developed web applications using Spring Boot Framework, Spring MVC, and Spring Security. I am proficient in Core Java, including Collection Framework and Java 8 features, as well as OOPS, Exception Handling, and Multi-Threading in application development. I have a good Knowledge of Data Structures and have implemented knowledge in Spring Framework, Hibernate, and REST Web Services. I am familiar with JWT, Open API, Apache Kafka, and Oauth2.0. I have worked on projects using Agile Scrum Process, and have experience in setting up MySQL databases, configuring application properties files, and integrating APIs such as I-text PDF generator and Email Sending Services.
+
+
+
+
+prime no:
+public class PrimeNumber {
+
+    public static void main(String[] args) {
+        int n = 50; //check number (check kar)
+        boolean isPrime = isPrime(n, 2);
+        
+        if (isPrime) {
+            System.out.println(n + " is a prime number.");
+        } else {
+            System.out.println(n + " is not a prime number.");
+        }
+    }
+
+    // Recursive method to check if a number is prime
+    static boolean isPrime(int n, int i) {
+        // Base case 1: If n is less than or equal to 1, it's not prime
+        if (n <= 1) {
+            return false;
+        }
+        // Base case 2: If n is less than or equal to 2, it is prime
+        if (n == 2) {
+            return true;
+        }
+        // If n is divisible by i, it's not prime
+        if (n % i == 0) {
+            return false;
+        }
+        // Base case 3: If i*i is greater than n, n is prime
+        if (i * i > n) {
+            return true;
+        }
+        // Recursive case: Check next possible divisor
+        return isPrime(n, i + 1);
+    }
+}
+
+
+ Nivetha ( 9611761190 )
+7397 469 235
+
+8121444670
+8121444692
+ 9030040870
+
+git clone https://github.com/Akir123/Student_Management.git
+MiniProject2.rar  my-project/  README.md  Student_Management/  Web_MVC_Thymeleaf_App.rar
+/c/Users/Admin/Student_Management/my-project
+bash: /c/Users/Admin/Student_Management: Is a directory
+
+git config --global Akir123 "Aditya Shashikant Suke"
+

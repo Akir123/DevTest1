@@ -1,0 +1,17 @@
+package com.java;
+import java.util.Arrays;
+import java.util.List;
+
+public class FlatMap {
+
+	public static void main(String[] args) {
+		List<List<String>> l = Arrays.asList(Arrays.asList("a","b","c"),
+				                             Arrays.asList("d","e","f"));
+		System.out.println(l);
+		List<String> l1 = l.stream()
+				.flatMap(List::stream)
+		.collect(Collectors.toList());
+		System.out.println(l1);
+	}
+	
+}

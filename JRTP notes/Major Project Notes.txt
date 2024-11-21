@@ -1,0 +1,471 @@
+================
+Major Project 
+================
+
+Types of Projects :
+
+1) Internet Based Projects
+
+	Ex: Gmail, Facebook, IRCTC, Linkedin etc...
+
+2) Intranet Based Projects (Portals)
+
+	Ex: Aadhar, SBI Money Transfer
+
+----------------------------------------------
+Client : Rhode Island (State Govt)
+
+Project Name : IES  - Integrated Eligibility System
+----------------------------------------------
+
+It is used to provide fully integrated eligibility System for RI state citizens.
+
+By using IES application, RI is providing below health and insurance plans for RI state citizens.
+
+1) SNAP (Supplemental Nutrition Assistance Program)
+2) CCAP (Child Care Assistance Program)
+3) Medicaid
+4) Medicare (Senior Citizens, above 60 years )
+5) QHP (Qualified Health Plan)
+6) RIW (Rhode Island Works)
+
+============================================================
+
+=> DHS : Department of Health Services
+
+=> DHS Employees : Case Workers
+
+=> IES application will be accessible only in DHS offices
+
+=> Caseworker will use IES application to provide benefits for Citizens.
+
+=> Citizens should visit nearest DHS office to apply for plans. Citizen should talk to case worker to apply for Plan.
+
+===========================================================
+
+In IES project we have below modules
+
+1) Admin
+
+2) CW Module
+
+3) AR (Application Registration)
+
+4) DC (Data Collection)
+
+5) ED (Eligibility Determination)
+
+6) CO (Correspondence Module)
+
+7) BI (Benefit Issuance)
+
+8) Reports
+
+
+
+
+=============
+Admin Module
+=============
+
+-> Admin is responsible to create accounts for case workers to access IES system.
+
+-> Admin is responsible to create Plans
+
+1) Case Worker Accounts Management (Create/Update/Delete/Retrieve)
+2) Plans management (Create/Update/Delete/Retrieve)
+
+
+1) Login
+2) Dashboard
+3) Edit Profile
+4) Forgot Pwd
+
+==========
+AR Module
+==========
+
+=> AR stands for Application Registration
+
+=> AR api will collect citizen basic information and it will verify Citizen belongs to RI state or not based on SSN (It will communicate with SSA-WEB API, which is federal gov project for verification).
+
+=> If citizen belongs to RI state then application will be created for citizen to apply for the plan.
+
+=> If citizen not belongs to RI state then application will not be created hence Citizen can't apply for the plan.
+
+=========
+DC Module
+==========
+
+=> DC stands for Data Collection
+
+=> DC api is responsible to collect citizen data which is required to apply for the plan
+
+1) Citizen details
+2) Family details
+3) Education Details
+4) Employment Details
+5) Income details
+6) Kids Details etc....
+
+===========
+ED Module
+===========
+
+=> ED stands for Eligiblity Determination
+
+=> ED is responsible to verify Citizen eligibility for the plan.
+
+=> ED will execute Plan conditions with citizen data.
+
+=> If citizen data matches with Plan conditions then citizen will be approved for the plan otherwise citizen will be denied for the plan.
+
+Note: Approved citizens will get benefit amount from Govt.
+
+==========
+CO Module
+==========
+
+=> CO stands for Correspondence
+
+=> This is responsible to send Notices to citizens regarding their plan eligibility
+
+1) Approved Notice
+2) Denied Notice
+3) Termination Notice
+4) Plan renewal Reminder
+5) Missing Documents
+
+==========
+BI Module
+==========
+
+=> BI stands for Benefit Issuance 
+
+=> It is responsible to send benefit amount to approved citizens.
+
+================
+Reports module
+================
+
+-> It is used to generate reports in excel/pdf format with application data
+
+1) Report Based on Plan Name
+
+2) Report Based on Plan Status
+
+3) Report Based on Duration (start date & end date)
+
+4) Report based on Citizen Gender
+
+
+1) What is IES
+2) Why IES required
+3) IES Client
+4) How to access IES
+5) IES Plans & Conditions
+6) IES Modules
+7) Purpose of Each Module in IES App
+
+
+
+Mock Screens : http://iesapp.s3-website.ap-south-1.amazonaws.com/login.html
+
+SSA Web API URL : http://65.2.166.5:8080/swagger-ui.html
+
+
+
+============
+Admin API
+============
+
+
+Table Name : IES_USER (It is used to store user account details)
+
+	USER_ID			pk
+	FULL_NAME
+	USER_EMAIL
+	USER_PWD
+	USER_PHNO
+	USER_GENDER
+	USER_DOB
+	USER_SSN
+	ACTIVE_SW (Default : Y)
+	ACC_STATUS (Default : LOCKED)
+	ROLE_ID
+	CREATE_DATE
+	UPDATE_DATE
+	CREATED_BY (Foregin Key : user_id from IES_USER table)
+	UPDATED_BY (Foregin Key : user_id from IES_USER table)
+	ROLE_ID
+
+
+Table name : IES_USER_ROLES (It is used to specify roles of our IES app)
+
+	ROLE_ID		PK
+	ROLE_NAME	
+
+Table Name : IES_PLANS (It is used to store Plans of IES app)
+
+    	PLAN_ID   PK
+	PLAN_NAME
+	PLAN_START_DATE
+	PLAN_END_DATE
+	PLAN_CATEGORY
+	ACTIVE_SW (Defult : Y)
+	CREATED_BY (Foregin Key : user_id from IES_USER table)
+	UPDATED_BY (Foregin Key : user_id from IES_USER table)
+	CREATED_DATE
+	UPDATED_DATE
+	
+
+Table name : IES_APPS (It is used to store citizen application details)
+
+	CASE_NUM     PK
+	NAME
+	EMAIL
+	PHNO
+	DOB
+	SSN
+	STATE_NAME
+	CITY_NAME
+	HOUSE_NUM
+	CREATED_BY (Foregin Key : user_id from IES_USER table)
+	CREATED_DATE
+
+
+Table : DC_PLAN_SELECTION (it is used to store citizen selected plan info)
+
+	plan_selection_id PK
+	case_num
+	plan_id
+
+Table : DC_INCOME  (It is used to store citizen income info)
+	
+	income_id  PK
+	salary_income
+	rent_income
+	property_income
+	case_num	FK
+
+
+Table : DC_CHILDREN (It is used to store citizen childrens info)
+
+	  child_id		PK
+          child_name	
+	  child_dob
+	  child_ssn
+          case_num		FK      	
+		
+
+Table : DC_EDUCATION (it is used to store citizen education info)
+
+	   education_id		PK
+	   highest_degree
+	   graduation_year
+	   university
+	   case_num  		FK
+
+
+Table : ED_ELIG_DTLS (It is used to store citizen eligibility details)
+
+	  ed_trace_id   PK
+	  case_num   FK
+	  plan_name
+	  plan_status
+	  elig_start_date
+	  elig_end_date
+          benefit_amt
+          denial_reason
+	  created_date
+
+
+Table : CO_NOTICES  (This is used to store citizen notices)
+
+	notice_id     PK
+	case_num      FK
+	ed_trace_id   FK
+	co_pdf	  blob
+        print_date
+	notice_status  ( P or H ) (default : P)
+        created_date
+        
+          
+Table  : BI_INFO (It will maintain citizen benefits status)
+
+	 benefit_id		PK
+	 case_num		FK
+	 benefit_month_year
+	 benefit_amt
+         transaction_date
+	 transaction_status
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=============================================
+
+1) Diff constructor and method
+
+2) What is serialization
+
+3) How to handle exceptions in java
+
+4) List Vs Set
+
+5) What is Synchronization
+
+6) try-catch with throws keyword in single method
+
+7) Difference between throw and throws
+
+8) Seriailzable interface is part of which package ?
+
+9) OOPS Concepts
+
+10) What is IOC container in Spring ?
+
+11) What is loosely coupling and tightly coupling ?
+
+12) What are access modifieres in java 
+
+13) What is the use of Postman ?
+
+14) Program to write toggle a string ( uppercase to lowercase & vice versa)
+
+		Input : 	AshokIT
+		Output : 	aSHOKit
+
+15) What is Dependency Injection & How many ways we can do that ?
+
+16) Write a java program to find smallest elements which are right side for each element
+
+				String ar[] = {"11", "2" , "5", "10", "4"}				
+
+17) Write a java program to find third highest value in the given array
+
+			int[] ar = {1, 6, 1, 7, 1, 6, 9, 8, 7, 9}
+
+18) Frequency of digits in given number
+
+			input : 79668
+
+19) Which annotations you are using in Spring Boot ?
+
+20) How to implement Serialization with Code ?
+
+21) How to say the class is Parent ?
+
+22) What is Marker Interface in Java ?
+
+23) What is JIRA ?
+
+24) What is use of GIT HUB?
+
+25) Why we need to use Debugging ?
+
+26) Overloading Vs Overriding
+
+27) Comparable Vs Comparator
+
+28) Stream API
+
+29) SDLC 
+
+30) Maven Goals
+
+31) Which Spring Cloud Version you are using ?
+
+32) Virtual DOM
+
+33) React JS Features
+
+34) JSX with Example
+
+35) Angular Vs React
+
+36) Components Life Cycle
+
+37) How to develop React Application
+
+38) What is POJO ?
+
+39) Difference between Local and instance variables ?
+
+40) What are this and super keywords ?
+
+41) Exception vs Error
+
+42) Keywords to handle Exception in java ?
+
+43) What are the annotation available in java ?
+
+44) REST API annotations
+
+45) Array vs ArrayList
+
+46) What is Multi Threading ?
+
+47) How to achieve Synchronization ?
+
+48) List out some unchecked exceptions
+
+49) How lombok will generate setters & getters
+
+50) Collections framework vs Collection (I) vs Collections (C)
+
+51) What is REST API ?
+
+52) Difference between Access specifiers and Access modifiers ?
+
+
+=========================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

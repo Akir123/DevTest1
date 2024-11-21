@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yourusername/your-repo
+          username: your-github-username
+          password: your-github-access-token
+

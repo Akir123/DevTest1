@@ -1,0 +1,14 @@
+package com.java;
+
+public class P {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+class Q {
+	private int a = 10;
+	private String b = "aman";
+}

@@ -1,0 +1,16 @@
+package com.java;
+
+import java.util.function.BiFunction;
+
+public class BiFunction {
+    public static void main(String[] args) {
+        // Define a BiFunction that adds two integers
+        java.util.function.BiFunction<Integer, Integer, Integer> b = (a, b) -> a + b;
+
+        // Use the BiFunction to add 5 and 6
+        Integer S1 = b.apply(5, 6);
+
+        // Print the result
+        System.out.println(S1);
+    }
+}

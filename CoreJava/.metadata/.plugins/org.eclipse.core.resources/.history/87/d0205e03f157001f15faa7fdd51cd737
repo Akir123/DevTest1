@@ -1,0 +1,29 @@
+package com.java;
+
+public class AnyMatch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+People p1 = new People("AVINASH","INDIA");
+People p1 = new People("BHAVESH","AUS");
+People p1 = new People("NIKHIL","BRAZIL");
+People p1 = new People("SONU","USA");
+People p1 = new People("MONU","UK");
+	}
+
+}
+class People {
+	String name;
+	String country;
+	
+	public People(String name, String country) {
+		this.name = name;
+		this.country = country;
+	}
+
+	@Override
+	public String toString() {
+		return "People [name=" + name + ", country=" + country + "]";
+	}
+	
+}

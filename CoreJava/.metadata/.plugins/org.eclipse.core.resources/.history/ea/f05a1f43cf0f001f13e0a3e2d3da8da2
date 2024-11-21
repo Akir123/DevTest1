@@ -1,0 +1,11 @@
+package Core;
+
+public class Q {
+
+	public static void main(String[] args) {
+	String s1 = "hello java";
+	String s2 = "java";
+
+	}
+
+}

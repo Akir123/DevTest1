@@ -1,0 +1,12 @@
+package Core;
+
+public class I {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String s1 = "aditya";
+String s2 = s1.toString();
+System.out.println(s2);
+	}
+
+}

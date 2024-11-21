@@ -1,0 +1,4 @@
+server.port=8081
+spring.application.name=SB_Config_Server_GREET_Client
+spring.config.import=configserver:http://localhost:8080
+

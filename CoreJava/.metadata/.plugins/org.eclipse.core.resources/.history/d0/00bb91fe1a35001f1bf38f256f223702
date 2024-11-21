@@ -1,0 +1,18 @@
+package com.java;
+
+public class Test {
+
+	public static void main(String[] args) {
+	public Node someFunction(Node root, int key) {
+		if(root == null || root.key == key) {
+			return root;
+		}
+		if(root.key > key) {
+			return someFunction(root.left, key);
+		}
+		return soneFunction(root.right, key);
+	}
+
+	}
+
+}

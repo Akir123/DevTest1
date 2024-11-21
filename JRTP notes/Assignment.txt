@@ -1,0 +1,10 @@
+============================
+Task (13th May - 15th May)
+============================
+1) AWS Account Creation
+
+2) JUnit : https://www.youtube.com/live/MEFoGR07qgw?feature=share
+
+3) Jenkins : https://youtu.be/Ri-URt8gPCk
+
+4) Kafka : https://www.youtube.com/live/VInk1_9vvCY?feature=share

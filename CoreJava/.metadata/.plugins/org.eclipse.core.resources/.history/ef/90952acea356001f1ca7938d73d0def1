@@ -1,0 +1,18 @@
+package com.java;
+
+import java.util.function.Supplier;
+
+public class Supplier1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Supplier<Integer> s = (v) -> {
+			for(int i = 0; i <= 5; i++) {
+				int a = s.get();
+				System.out.println(a);
+			}
+			
+		};
+	}
+
+}

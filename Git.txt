@@ -1,0 +1,104 @@
+Admin@DESKTOP-QQ34FFS MINGW64 ~/Lion (main)
+$ git branch feature1
+
+Admin@DESKTOP-QQ34FFS MINGW64 ~/Lion (main)
+$ git checkout -b feature2
+Switched to a new branch 'feature2'
+
+Admin@DESKTOP-QQ34FFS MINGW64 ~/Lion (feature2)
+$ git branch
+  feature1
+* feature2
+  main
+
+Admin@DESKTOP-QQ34FFS MINGW64 ~/Lion (feature2)
+$ git checkout feature1
+M       Lion
+Switched to branch 'feature1'
+
+Admin@DESKTOP-QQ34FFS MINGW64 ~/Lion (feature1)
+$ git branch
+* feature1
+  feature2
+  main
+
+Admin@DESKTOP-QQ34FFS MINGW64 ~/Lion (feature1)
+$ touch my_features
+
+Admin@DESKTOP-QQ34FFS MINGW64 ~/Lion (feature1)
+$ git add .
+
+Admin@DESKTOP-QQ34FFS MINGW64 ~/Lion (feature1)
+$ git commit -m "NEW FEATURES"
+[feature1 71353f2] NEW FEATURES
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100644 my_features
+
+Admin@DESKTOP-QQ34FFS MINGW64 ~/Lion (feature1)
+$ git push
+fatal: The current branch feature1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature1
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Admin@DESKTOP-QQ34FFS MINGW64 ~/Lion (feature1)
+$  git push --set-upstream origin feature1
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 281 bytes | 281.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'feature1' on GitHub by visiting:
+remote:      https://github.com/Akir123/Lion/pull/new/feature1
+remote:
+To https://github.com/Akir123/Lion.git
+ * [new branch]      feature1 -> feature1
+branch 'feature1' set up to track 'origin/feature1'.
+
+Admin@DESKTOP-QQ34FFS MINGW64 ~/Lion (feature1)
+$ git log
+commit 71353f2170630ba724a98306fdcee99b6b317318 (HEAD -> feature1, origin/feature1)
+Author: Aditya Shashikant Suke <akir47231@gmail.com>
+Date:   Sun Sep 1 04:14:31 2024 +0530
+
+    NEW FEATURES
+
+commit 71353f2170630ba724a98306fdcee99b6b317318 (HEAD -> feature1, origin/feature1)
+Author: Aditya Shashikant Suke <akir47231@gmail.com>
+Date:   Sun Sep 1 04:14:31 2024 +0530
+
+    NEW FEATURES
+
+commit 8de5700f062b28bb1cb8ca0de4efee9e1da05480 (origin/main, main, feature2)
+Author: Aditya Shashikant Suke <162463663+Akir123@users.noreply.github.com>
+Date:   Sun Sep 1 03:35:35 2024 +0530
+
+    Create Information.txt
+
+commit b8f01f35356484ae3e0ce0a5697da231bc28bff4
+Author: Aditya Shashikant Suke <akir47231@gmail.com>
+Date:   Sun Sep 1 03:27:36 2024 +0530
+
+    UPDATE5
+
+commit 71804255021cdda618a3cfc5d87e43545eb027c4
+Author: Aditya Shashikant Suke <akir47231@gmail.com>
+Date:   Sun Sep 1 03:00:49 2024 +0530
+
+    Wow
+
+commit 79a13f7fb3e2a56e888be89ddad05c2b6897436e
+Author: Akir123 <akir47231@gmail.com>
+Date:   Sun Sep 1 01:58:43 2024 +0530
+
+    Third
+(END)
+
+

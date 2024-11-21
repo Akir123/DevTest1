@@ -1,0 +1,17 @@
+package com.java;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+
+public class DuplicateStream {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Integer> a = Arrays.asList(1,4,6,7,5,3,1,4,1,6,9,9,6,9,0);
+		Set<Integer> duplicates = (Set<Integer>) a.stream();
+		.filter(n -> a.stream().filter(x->x.equals(n)).count > 1)
+		.collect();
+	}
+
+}

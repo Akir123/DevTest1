@@ -1,0 +1,11 @@
+1720298409623	Rename type 'Controller'
+1720298420791	Rename type 'Entity'
+1720298432876	Rename type 'Repository'
+1720300829928	Rename type 'PatientController'
+1720300854475	Rename type 'PatientEntity'
+1720300870642	Rename type 'PatientRepository'
+1720300887977	Rename type 'PatientService'
+1720302599947	Rename resource 'index.html'
+1720303286050	Delete element
+1720303290970	Delete element
+1720303295895	Delete element

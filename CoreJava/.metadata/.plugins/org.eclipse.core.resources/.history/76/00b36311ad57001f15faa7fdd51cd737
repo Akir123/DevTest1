@@ -1,0 +1,27 @@
+package com.java;
+
+public class OptionalClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+class Optional {
+	public Optional<String> m1(Integer id) {
+		String name = null;
+		if(id == 100) {
+			return "Raju";
+		}
+		else if(id == 200) {
+			return "Ashu";
+		}
+		else if(id == 300) {
+			return "Aman";
+		}
+		else {
+			return "Nisha";
+		}
+	}
+}

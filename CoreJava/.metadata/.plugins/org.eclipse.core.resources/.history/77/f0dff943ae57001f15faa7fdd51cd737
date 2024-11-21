@@ -1,0 +1,33 @@
+package com.java;
+
+public class OptionalClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Optiona o = new Optiona();
+		Optional<String> m1 = o.getUsername(userId);
+		if(username.isPresent()) {
+			String name = username.get();
+			System.out.println(name.toUpperCase());
+		}
+		else {
+			System.out.println("No Data");
+		}
+	}
+
+}
+class Optiona {
+	public Optional<String> username(Integer id) {
+		String name = null;
+		if(id == 100) {
+			return "Raju";
+		}
+		else if(id == 200) {
+			return "Ashu";
+		}
+		else if(id == 300) {
+			return "Aman";
+		}
+		return Optional.ofNullable(name);
+	}
+}

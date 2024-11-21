@@ -1,0 +1,12 @@
+package Core;
+
+public class V {
+
+	public static void main(String[] args) {
+		int[]arr = {34,6,7,64,2,4,2,764,43,1};
+		int min = arr[0];
+		System.out.println(min);
+
+	}
+
+}

@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: SB_Spring_Security_Auth_2.0
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: 
+            clientSecret: 

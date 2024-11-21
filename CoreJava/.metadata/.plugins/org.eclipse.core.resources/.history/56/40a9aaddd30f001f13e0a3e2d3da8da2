@@ -1,0 +1,16 @@
+package Core;
+
+public class Aman {
+
+	public static void main(String[] args) {
+		M m = (a,b)-> a+b;
+		int res = m.sum(10,20);
+		System.out.println(m);
+
+	}
+
+}
+@FunctionalInterface
+interface M {
+int sum(a,b);
+}

@@ -1,0 +1,18 @@
+package com.java;
+
+public class Users {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+Users1 {
+	int emp_age;
+	String emp_name;
+	public Users(int emp_age, String emp_name) {
+		this.emp_name = emp_name;
+		this.emp_age = emp_age;
+	}
+}

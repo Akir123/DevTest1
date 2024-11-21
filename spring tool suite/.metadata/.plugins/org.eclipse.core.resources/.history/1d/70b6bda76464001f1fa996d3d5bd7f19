@@ -1,0 +1,5 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: SB_Config_Server_GREET_Client

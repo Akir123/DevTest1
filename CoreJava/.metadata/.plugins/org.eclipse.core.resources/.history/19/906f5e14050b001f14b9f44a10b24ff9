@@ -1,0 +1,12 @@
+package Core;
+
+public class J {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String s1 = "adityashashikantsuke";
+String s2 = s1.substring(4,5);
+System.out.println(s2);
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.java;
+
+public class G {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+class G1 {
+	class MyThread implements Thread {
+		public void run() {
+			System.out.println("hiii");
+		}
+	}
+}

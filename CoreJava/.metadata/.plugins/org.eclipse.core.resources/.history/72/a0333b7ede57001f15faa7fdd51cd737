@@ -1,0 +1,17 @@
+package com.java;
+
+import java.util.List;
+import java.util.Arrays;
+
+public class StreamAPI2 {
+
+	public static void main(String[] args) {
+		//List<String> list = Arrays.asList("Adi","Aman","Rahul","Mayur","Abhi");
+		
+		String[] arr = {"aman","shende","rahul","pratik"};
+		for(int i = 0; i <= arr.length-1; i++) {
+			System.out.println(arr[i]);
+		}
+	}
+
+}

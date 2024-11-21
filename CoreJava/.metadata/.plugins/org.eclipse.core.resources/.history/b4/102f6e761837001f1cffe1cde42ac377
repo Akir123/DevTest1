@@ -1,0 +1,20 @@
+package com.java;
+
+public class FunctionalInt {
+
+	public static void main(String[] args) {
+		Ashu a = new Ashu();
+		a.m1();
+
+	}
+
+}
+@FunctionalInterface
+interface Adi {
+	public void m1();
+}
+class Ashu implements Adi {
+	public void m1() {
+		System.out.println("hi");
+	}
+}

@@ -1,0 +1,29 @@
+
+https://www.mediafire.com/file/vswc2h4nswu3ncn/02_mini_project_resources.zip/file
+
+github link:
+akir123.github.io
+
+
+
+package in.ashokit.config;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import in.ashokit.entity.CitizenPlan;
+
+@Configuration
+public class AppConfig {
+
+    @Bean
+    public List<CitizenPlan> citizenPlans() {
+        // Assuming CitizenPlan is a Spring-managed entity or bean
+        // You would populate this list with actual data
+        return new ArrayList<>();
+    }
+    
+}

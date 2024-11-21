@@ -1,0 +1,17 @@
+server:
+  port: 8888
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uris:
+            - https://github.com/Akir123/greet-repo.git
+            - https://github.com/Akir123/welcome-repo.git
+          username: akir47231@gmail.com
+          password: Githubaditya123
+          searchPaths:
+            - 'config-repo' # Optional, specify if you have specific paths in the repos
+
+

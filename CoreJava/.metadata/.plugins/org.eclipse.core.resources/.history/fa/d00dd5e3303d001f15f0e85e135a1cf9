@@ -1,0 +1,27 @@
+package com.java;
+
+public class Singleton {
+
+	public static void main(String[] args) {
+		Singleton1 singletonInstance1 = Singleton.getInstance();
+		Singleton1 singletonInstance2 = Singleton.getInstance();
+
+	}
+
+	private static Singleton1 getInstance() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}
+class Singleton1 {
+	private static Singleton1 instance;
+	private Singleton1() {
+		
+	}
+	public static Singleton1 getInstance() {
+		if(instance ==null) {
+			instance = new Singleton1();
+		}
+		return instance;
+	}
+}

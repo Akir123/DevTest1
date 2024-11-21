@@ -1,0 +1,17 @@
+package com.java;
+
+public class G {
+
+	public static void main(String[] args) {
+		G1 m = new G1();
+
+	}
+
+}
+class G1 {
+	class MyThread implements Thread {
+		public void run() {
+			System.out.println("hiii");
+		}
+	}
+}
