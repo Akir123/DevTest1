@@ -2,8 +2,8 @@ hello lab
 bye
 yes
 no
-what yoya
-ok
+bat
+sup
 go
 goa
 
